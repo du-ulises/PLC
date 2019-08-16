@@ -1,0 +1,59 @@
+ORGANIZATION_BLOCK PRINCIPAL:OB1
+TITLE=COMENTARIOS DEL PROGRAMA
+BEGIN
+Network 1 // Título de segmento
+// Comentario de segmento
+LD     I0.0
+O      M0.0
+AN     C2
+=      M0.0
+Network 2 
+// Primer lámpara
+LD     Q0.0
+O      T47
+AN     C2
+A      M0.0
+AN     T46
+=      Q0.0
+TON    T41, 10
+Network 3 
+// Segunda lámpara
+LD     T41
+AN     T45
+=      Q0.1
+TON    T42, 10
+Network 4 
+// Tercer lámpara
+LD     T42
+AN     T44
+=      Q0.2
+TON    T43, 10
+Network 5 
+LD     T43
+O      T44
+A      Q0.0
+TON    T44, 10
+TON    T45, 20
+TON    T46, 30
+Network 6 
+LDN    Q0.0
+AN     Q0.1
+TON    T47, 10
+Network 7 
+LD     M0.0
+AN     Q0.0
+LDN    M0.0
+CTU    C2, 5
+END_ORGANIZATION_BLOCK
+SUBROUTINE_BLOCK SBR_0:SBR0
+TITLE=COMENTARIOS DE LA SUBRUTINA
+BEGIN
+Network 1 // Título de segmento
+// Comentario de segmento
+END_SUBROUTINE_BLOCK
+INTERRUPT_BLOCK INT_0:INT0
+TITLE=COMENTARIOS DE LA RUTINA DE INTERRUPCIÓN
+BEGIN
+Network 1 // Título de segmento
+// Comentario de segmento
+END_INTERRUPT_BLOCK
